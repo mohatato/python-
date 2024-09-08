@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة المقالات</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='writing_image.png') }}" alt="صورة تعبيرية عن الكتابة">
+        <h1>مقالات تم نشرها</h1>
+    </header>
+    <a href="/new">كتابة مقال جديد</a>
+    <ul>
+        {% for article in articles %}
+            <li>
+                <h2>{{ article[1] }}</h2>
+                <p>{{ article[2] }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+

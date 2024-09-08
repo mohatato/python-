@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كتابة مقال جديد</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>كتابة مقال جديد</h1>
+    <form action="/new" method="POST">
+        <label for="title">عنوان المقالة:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="content">محتوى المقالة:</label>
+        <textarea id="content" name="content" rows="5" required></textarea>
+        <button type="submit">نشر المقالة</button>
+    </form>
+    <a href="/">العودة إلى الصفحة الرئيسية</a>
+</body>
+</html>
